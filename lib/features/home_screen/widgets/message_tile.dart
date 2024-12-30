@@ -23,7 +23,11 @@ class MessageTile extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: message.isUser ? Colors.blue : Colors.grey[200],
+            color: message.isFailed
+                ? Colors.red.withOpacity(.4)
+                : message.isUser
+                    ? Colors.blue
+                    : Colors.grey[200],
           ),
           child: Text(
             message.message,
