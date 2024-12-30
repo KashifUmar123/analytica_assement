@@ -11,15 +11,14 @@ class CustomBottomNavbar extends GetView<BottomNavbarController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-        init: controller,
-        builder: (_) {
-          return CustomScaffold(
-            navigationBar: _buildBottomNavbar(),
-            child: const Column(
-              children: [],
-            ),
-          );
-        });
+      init: controller,
+      builder: (_) {
+        return CustomScaffold(
+          navigationBar: _buildBottomNavbar(),
+          child: controller.screens[controller.selectedIndex],
+        );
+      },
+    );
   }
 
   Widget _buildBottomNavbar() {
