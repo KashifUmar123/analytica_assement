@@ -12,6 +12,6 @@ class SplashScreenController extends BaseController {
 
   void _navigateToHome() async {
     await Future.delayed(const Duration(seconds: 2));
-    navigator.pushReplacementNamed(RouteNames.home, analyticKey: "");
+    navigator.pushReplacementNamed(RouteNames.bottomNav, analyticKey: "");
   }
 }
