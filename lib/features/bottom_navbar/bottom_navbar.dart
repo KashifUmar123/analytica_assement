@@ -25,7 +25,7 @@ class CustomBottomNavbar extends GetView<BottomNavbarController> {
     return Container(
       height: 68,
       width: double.infinity,
-      margin: const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 34),
+      margin: const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 20),
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(20),

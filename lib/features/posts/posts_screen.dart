@@ -102,7 +102,7 @@ class PostsScreen extends GetView<PostsScreenController> {
     return Container(
       width: Get.width,
       decoration: const BoxDecoration(
-        color: Colors.blueAccent,
+        color: AppColors.background,
       ),
       padding: const EdgeInsets.symmetric(
         horizontal: 20,
@@ -114,7 +114,7 @@ class PostsScreen extends GetView<PostsScreenController> {
           child: Text(
             "Posts",
             style: context.label22400.copyWith(
-              color: AppColors.white,
+              color: AppColors.black,
             ),
           ),
         ),

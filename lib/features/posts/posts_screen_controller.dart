@@ -85,8 +85,12 @@ class PostsScreenController extends BaseController {
     result.fold(
       (left) {
         debugPrint("[POSTS FETCHING FALIED]: ${left.message}");
-        if (paginate) {
-          AppUtils.showCustomSnackbar(title: "Error", message: left.message);
+        if (paginate || !showLoading) {
+          AppUtils.showCustomSnackbar(
+            title: "Error",
+            message: left.message,
+            isError: true,
+          );
         } else {
           hasPaginationRegistered = false;
           error = left.message;
