@@ -1,5 +1,6 @@
 import 'package:analytica_assement/core/network/dio_wrapper.dart';
 import 'package:analytica_assement/core/pages/app_navigator.dart';
+import 'package:analytica_assement/core/services/ai_service.dart';
 import 'package:analytica_assement/core/services/env_service.dart';
 import 'package:analytica_assement/core/services/netwrok_service.dart';
 import 'package:dio/dio.dart';
@@ -11,6 +12,8 @@ class InitialBindings extends Bindings {
     Get.put<INavigator>(NavigatorImpl(), permanent: true);
 
     Get.put<INetworkInfo>(NetworkInfoImpl(), permanent: true);
+
+    Get.put<AIService>(GeminiAIService(), permanent: true);
 
     Get.lazyPut<IDioWrapper>(
       () => DioWrapperImp(
