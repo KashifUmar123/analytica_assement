@@ -1,4 +1,4 @@
-import 'package:analytica_assement/core/base/failures.dart';
+import 'package:analytica_assement/core/network/failures.dart';
 import 'package:dio/dio.dart';
 
 abstract class IDioWrapper {
