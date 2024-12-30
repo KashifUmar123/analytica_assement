@@ -15,21 +15,21 @@ extension EContextExtension on BuildContext {
   TextStyle get label14400 => GoogleFonts.poppins(
         fontSize: 14,
         fontWeight: FontWeight.w400,
-        color: AppColors.blue,
+        color: AppColors.black,
       );
   TextStyle get label16400 => GoogleFonts.poppins(
         fontSize: 16,
         fontWeight: FontWeight.w400,
-        color: AppColors.blue,
+        color: AppColors.black,
       );
   TextStyle get label22400 => GoogleFonts.poppins(
         fontSize: 22,
         fontWeight: FontWeight.w400,
-        color: AppColors.blue,
+        color: AppColors.black,
       );
   TextStyle get label30400 => GoogleFonts.poppins(
         fontSize: 30,
         fontWeight: FontWeight.w400,
-        color: AppColors.blue,
+        color: AppColors.black,
       );
 }

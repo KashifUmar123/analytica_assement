@@ -1,3 +1,4 @@
+import 'package:analytica_assement/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -32,6 +33,7 @@ class CustomScaffold extends StatelessWidget {
       child: Scaffold(
         drawer: drawer,
         body: child,
+        backgroundColor: AppColors.background,
         bottomNavigationBar: navigationBar,
         floatingActionButton: floatingActionButton,
       ),
