@@ -1,8 +1,8 @@
 import 'package:analytica_assement/core/pages/route_names.dart';
 import 'package:analytica_assement/features/bottom_navbar/bottom_navbar.dart';
 import 'package:analytica_assement/features/bottom_navbar/bottom_navbar_bindings.dart';
-import 'package:analytica_assement/features/home_screen/home_screen.dart';
 import 'package:analytica_assement/features/home_screen/home_screen_bindings.dart';
+import 'package:analytica_assement/features/posts/posts_screen_bindings.dart';
 import 'package:analytica_assement/features/splash/splash_screen.dart';
 import 'package:analytica_assement/features/splash/splash_screen_bindings.dart';
 import 'package:flutter/material.dart';
@@ -23,11 +23,8 @@ class AppRoutes {
       bindings: [
         BottomNavbarBindings(),
         HomeScreenBindings(),
+        PostsScreenBindings(),
       ],
-    ),
-    getPage(
-      name: RouteNames.home,
-      page: const HomeScreen(),
     ),
   ];
 

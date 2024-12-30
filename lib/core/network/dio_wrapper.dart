@@ -55,7 +55,7 @@ class DioWrapperImp implements IDioWrapper {
       case 408:
         return DioTimeoutError(message: "Request Timeout");
       case 500:
-        return ServerFailure();
+        return ServerFailure("Internal Server Error");
       case 503:
         return ServiceUnavailableFailure(message: "Service Unavailable");
       default:

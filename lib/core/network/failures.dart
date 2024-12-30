@@ -14,7 +14,7 @@ class CustomFailure extends Failure {
 }
 
 class ServerFailure extends Failure {
-  ServerFailure() : super('Server Failure');
+  ServerFailure(String s) : super('Server Failure');
 }
 
 class ResourceNotFound extends Failure {
