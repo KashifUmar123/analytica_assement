@@ -15,9 +15,14 @@ class GeminiAIService implements AIService {
         Part.text(message),
       ]);
       return Right(response?.output ?? '');
-    } catch (e) {
+    } on GeminiException catch (e) {
       debugPrint("Gemini Error: $e");
-      return Left(CustomFailure("Gemini Error: $e"));
+      if (e.message.toString().contains("The connection errored")) {
+        return Left(NoInternetFailure());
+      }
+      return Left(CustomFailure(e.message.toString()));
+    } catch (e) {
+      return Left(CustomFailure("Something wen't wrong"));
     }
   }
 }

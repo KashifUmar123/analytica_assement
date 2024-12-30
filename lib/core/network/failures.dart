@@ -21,28 +21,13 @@ class ResourceNotFound extends Failure {
   ResourceNotFound() : super('Not Found Failure');
 }
 
+class NoInternetFailure extends Failure {
+  NoInternetFailure() : super("No internet connection");
+}
+
 class AutorizationFailure extends Failure {
   AutorizationFailure() : super('Autorization Failure');
 }
-
-/*
-switch (response.statusCode) {
-      case 400:
-        return const DioBadRequest(message: "Bad Request");
-      case 401:
-        return const DioUnAuthorized(message: "Unauthorized Request");
-      case 404:
-        return const DioNotFoundError(message: "Resource Not Found");
-      case 408:
-        return const DioTimeoutError(message: "Request Timeout");
-      case 500:
-        return const ServerFailure("Internal Server Error");
-      case 503:
-        return const ServiceUnavailableFailure(message: "Service Unavailable");
-      default:
-        return const DioDefaultFailure(message: "Unknown Error");
-    }
-*/
 
 class DioBadRequest extends Failure {
   DioBadRequest({required String message}) : super(message);

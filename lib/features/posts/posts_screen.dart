@@ -38,20 +38,31 @@ class PostsScreen extends GetView<PostsScreenController> {
       return const CircularProgressIndicator();
     } else if (controller.error != null) {
       return Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              controller.error.toString(),
-            ),
-            const SizedBox(height: 20),
-            CustomButton(
-              text: "Retry",
-              callback: () {
-                controller.onRetry();
-              },
-            ),
-          ],
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: AppColors.white,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                controller.error.toString(),
+              ),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: CustomButton(
+                  text: "Retry",
+                  callback: () {
+                    controller.onRetry();
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       );
     }

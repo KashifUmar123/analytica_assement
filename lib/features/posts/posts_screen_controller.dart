@@ -1,5 +1,6 @@
 import 'package:analytica_assement/core/base/base_controller.dart';
 import 'package:analytica_assement/core/pages/app_navigator.dart';
+import 'package:analytica_assement/core/utils/app_utils.dart';
 import 'package:analytica_assement/features/posts/services/models/get_posts_params.dart';
 import 'package:analytica_assement/features/posts/services/models/post_model.dart';
 import 'package:analytica_assement/features/posts/services/usecases/get_posts_usecase.dart';
@@ -85,7 +86,7 @@ class PostsScreenController extends BaseController {
       (left) {
         debugPrint("[POSTS FETCHING FALIED]: ${left.message}");
         if (paginate) {
-          // TODO: display a snackbar during pagination failed
+          AppUtils.showCustomSnackbar(title: "Error", message: left.message);
         } else {
           hasPaginationRegistered = false;
           error = left.message;
